@@ -64,6 +64,10 @@ const images = [
     },
   ];
   
+import SimpleLightbox from 'simplelightbox';
+import  'simplelightbox/dist/simple-lightbox.min.css'
+
+
   const galleryElem = document.querySelector(".gallery");
   const markup = images
     .map((image) => {
@@ -82,32 +86,46 @@ const images = [
   
   galleryElem.innerHTML = markup;
   
-  let instance = basicLightbox.create(`<img src="" width="1112" height="640">`, 
-  {
-      onShow: (instance) => {
-        document.addEventListener("keydown", handleKeyDown);
-      },
-      onClose: (instance) => {
-        document.removeEventListener("keydown", handleKeyDown);     
-      }
-  });
+  // let instance = basicLightbox.create(`<img src="" width="1112" height="640">`, 
+  // {
+  //     onShow: (instance) => {
+  //       document.addEventListener("keydown", handleKeyDown);
+  //     },
+  //     onClose: (instance) => {
+  //       document.removeEventListener("keydown", handleKeyDown);     
+  //     }
+  // });
   
-  galleryElem.addEventListener("click", (el) => {
-    if (el.target === el.currentTarget) {
-      return;
-    }
+  // galleryElem.addEventListener("click", (el) => {
+  //   if (el.target === el.currentTarget) {
+  //     return;
+  //   }
   
-    el.preventDefault();
+  //   el.preventDefault();
   
-    instance.element().querySelector("img").src = el.target.closest("li").querySelector("img").dataset.source;
+  //   instance.element().querySelector("img").src = el.target.closest("li").querySelector("img").dataset.source;
   
-    instance.show();
-  });
+  //   instance.show();
+  // });
   
-  function handleKeyDown(event) {
-    if (event.key === "Escape" || event.code === "Escape") {
-      if (instance && instance.visible()) {
-        instance.close();
-      }
-    }
-  }
+  // function handleKeyDown(event) {
+  //   if (event.key === "Escape" || event.code === "Escape") {
+  //     if (instance && instance.visible()) {
+  //       instance.close();
+  //     }
+  //   }
+  // }
+
+
+  const options = {
+    captions: true,
+    captionType: 'attr',
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    fadeSpeed: 150,
+    captionSelector: 'img',
+    captionDelay: 250,
+  };
+  
+ const lightbox = new
+  lightbox.on('show.simplelightbox');
