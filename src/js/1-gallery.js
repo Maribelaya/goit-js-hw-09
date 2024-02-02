@@ -86,37 +86,6 @@ import  'simplelightbox/dist/simple-lightbox.min.css'
   galleryElem.innerHTML = markup;
   el.preventDefault();
   
-  // let instance = basicLightbox.create(`<img src="" width="1112" height="640">`, 
-  // {
-  //     onShow: (instance) => {
-  //       document.addEventListener("keydown", handleKeyDown);
-  //     },
-  //     onClose: (instance) => {
-  //       document.removeEventListener("keydown", handleKeyDown);     
-  //     }
-  // });
-  
-  // galleryElem.addEventListener("click", (el) => {
-  //   if (el.target === el.currentTarget) {
-  //     return;
-  //   }
-  
-  //   
-  
-  //   instance.element().querySelector("img").src = el.target.closest("li").querySelector("img").dataset.source;
-  
-  //   instance.show();
-  // });
-  
-  // function handleKeyDown(event) {
-  //   if (event.key === "Escape" || event.code === "Escape") {
-  //     if (instance && instance.visible()) {
-  //       instance.close();
-  //     }
-  //   }
-  // }
-
-
   const options = {
     captions: true,
     captionType: 'attr',
@@ -127,5 +96,5 @@ import  'simplelightbox/dist/simple-lightbox.min.css'
     captionDelay: 250,
   };
   
- const lightbox = new
-  lightbox.on('show.simplelightbox');
+
+   const lightbox = new SimpleLightbox('.gallery a', options);
