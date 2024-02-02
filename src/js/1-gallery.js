@@ -77,7 +77,6 @@ import  'simplelightbox/dist/simple-lightbox.min.css'
          <img
            class="gallery-image"
            src="${image.preview}"
-           data-source="${image.original}"
            alt="${image.description}"/>
        </a>
        </li>`;
@@ -85,6 +84,7 @@ import  'simplelightbox/dist/simple-lightbox.min.css'
     .join("");
   
   galleryElem.innerHTML = markup;
+  el.preventDefault();
   
   // let instance = basicLightbox.create(`<img src="" width="1112" height="640">`, 
   // {
@@ -101,7 +101,7 @@ import  'simplelightbox/dist/simple-lightbox.min.css'
   //     return;
   //   }
   
-  //   el.preventDefault();
+  //   
   
   //   instance.element().querySelector("img").src = el.target.closest("li").querySelector("img").dataset.source;
   
