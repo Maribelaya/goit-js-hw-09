@@ -8,11 +8,15 @@ body {
 
 .feedback-form {
     padding: 24px;
+    width: 360;
+    height: 40;
 }
 
 label {
     display: flex;
     flex-direction: column;
+    width: 360;
+    height: 80;
 }
 
 input {

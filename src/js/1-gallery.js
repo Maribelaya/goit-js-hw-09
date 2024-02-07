@@ -84,17 +84,12 @@ import  'simplelightbox/dist/simple-lightbox.min.css'
     .join("");
   
   galleryElem.innerHTML = markup;
-  el.preventDefault();
   
   const options = {
     captions: true,
-    captionType: 'attr',
     captionsData: 'alt',
     captionPosition: 'bottom',
-    fadeSpeed: 150,
-    captionSelector: 'img',
     captionDelay: 250,
   };
   
-
    const lightbox = new SimpleLightbox('.gallery a', options);
