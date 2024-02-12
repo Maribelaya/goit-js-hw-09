@@ -1,2 +1,0 @@
-let e=document.querySelector("form"),l="feedback-form-state",a={email:"",message:""},m=localStorage.getItem(l);m&&(a=JSON.parse(m),e.email.value=a.email,e.message.value=a.message);e.addEventListener("input",t=>{t.target.name=="email"&&(a.email=t.target.value.trim()),t.target.name=="message"&&(a.message=t.target.value.trim()),localStorage.setItem(l,JSON.stringify(a))});e.addEventListener("submit",t=>{t.preventDefault(),e.email.value&&e.message.value&&(e.email.value="",e.message.value="",console.log(a),localStorage.removeItem(l))});
-//# sourceMappingURL=2-form-4786d2c3.js.map
