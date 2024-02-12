@@ -86,7 +86,6 @@ import  'simplelightbox/dist/simple-lightbox.min.css'
   galleryElem.innerHTML = markup;
   
   const options = {
-    captions: true,
     captionsData: 'alt',
     captionPosition: 'bottom',
     captionDelay: 250,

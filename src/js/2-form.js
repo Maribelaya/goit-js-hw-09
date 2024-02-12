@@ -1,7 +1,7 @@
 let form = document.querySelector('form');
 let localStorageKey = "feedback-form-state";
 
-let formData = {email: "", message: ""};
+const formData = {email: "", message: ""};
 let localStorageItem = localStorage.getItem(localStorageKey);
 
 if(localStorageItem){
@@ -11,13 +11,8 @@ if(localStorageItem){
 }
 
 form.addEventListener('input', event => {
-  if(event.target.name == "email"){ 
     formData.email = event.target.value.trim();
-  }
-
-  if(event.target.name == "message"){ 
     formData.message = event.target.value.trim();
-  }
 
   localStorage.setItem(localStorageKey, JSON.stringify(formData));
 });
@@ -35,7 +30,10 @@ form.addEventListener('submit', event => {
   }
   else
   {
-
+    if (email === '' || message === '') {
+      alert('Будь ласка, заповніть всі поля.');
+      return;
+  }
   }
 });
 
